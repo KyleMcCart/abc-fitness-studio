@@ -54,3 +54,99 @@ font-size: 16px;
 .about ul {
   margin-top: 15px;
 }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-card {
+  background: #1b1b1b;
+  border: 1px solid #2b2b2b;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: left;
+}
+
+.gallery-card h3 {
+  margin-top: 0;
+}
+
+.price {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.gallery-card button {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Modal */
+.modal.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.modal-content {
+  background: #ffffff;
+  color: #111;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  padding: 18px;
+  position: relative;
+  text-align: left;
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+#cartItems {
+  margin-top: 12px;
+}
+
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.modal-actions button {
+  flex: 1;
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  .modal-actions {
+    flex-direction: column;
+  }
+}
