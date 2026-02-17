@@ -39,3 +39,18 @@ font-size: 16px;
   object-fit: cover;
   border-radius: 10px;
 }
+.about {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.about h3 {
+  margin-top: 25px;
+  color: #2a2aff;
+}
+
+.about ul {
+  margin-top: 15px;
+}
