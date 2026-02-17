@@ -1,47 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gallery | ABC Fitness Studio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
   <h1>ABC Fitness Studio</h1>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="classes.html">Classes</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="about.html">About Us</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="classes.html">Classes</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-  <h2>Our Fitness Gallery</h2>
-  <p>Take a look inside our studio and classes.</p>
+  <h2>Gallery</h2>
+  <p>Explore our popular classes and training options.</p>
+  <button id="viewCartBtn" type="button">View Cart</button>
 </section>
 
-<section class="gallery">
+<main class="gallery-grid">
 
-  <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=600" alt="Gym equipment">
+  <!-- Item 1 -->
+  <section class="gallery-card">
+    <h3>HIIT Training</h3>
+    <p>High-intensity interval training to boost endurance and burn calories.</p>
+    <p class="price">$15</p>
+    <button type="button" onclick="addToCart('HIIT Training', 15)">Add to Cart</button>
+  </section>
 
-  <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600" alt="Workout class">
+  <!-- Item 2 -->
+  <section class="gallery-card">
+    <h3>Yoga Flow</h3>
+    <p>Stretch, strengthen, and reset with a guided yoga session.</p>
+    <p class="price">$12</p>
+    <button type="button" onclick="addToCart('Yoga Flow', 12)">Add to Cart</button>
+  </section>
 
-  <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600" alt="Weight training">
+  <!-- Item 3 -->
+  <section class="gallery-card">
+    <h3>Strength Training</h3>
+    <p>Build power and confidence with a full-body strength program.</p>
+    <p class="price">$18</p>
+    <button type="button" onclick="addToCart('Strength Training', 18)">Add to Cart</button>
+  </section>
 
-  <img src="https://images.unsplash.com/photo-1546484959-f4a3f4c9b1b7?w=600" alt="Personal training">
+  <!-- Item 4 -->
+  <section class="gallery-card">
+    <h3>Personal Training</h3>
+    <p>One-on-one coaching customized to your goals and schedule.</p>
+    <p class="price">$45</p>
+    <button type="button" onclick="addToCart('Personal Training', 45)">Add to Cart</button>
+  </section>
 
-  <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600" alt="Fitness studio">
+  <!-- Item 5 -->
+  <section class="gallery-card">
+    <h3>Cardio Bootcamp</h3>
+    <p>Fast-paced cardio circuits for stamina and heart health.</p>
+    <p class="price">$16</p>
+    <button type="button" onclick="addToCart('Cardio Bootcamp', 16)">Add to Cart</button>
+  </section>
 
-  <img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?w=600" alt="Strength training">
+  <!-- Item 6 -->
+  <section class="gallery-card">
+    <h3>Core & Mobility</h3>
+    <p>Improve posture, balance, and flexibility with targeted mobility work.</p>
+    <p class="price">$14</p>
+    <button type="button" onclick="addToCart('Core & Mobility', 14)">Add to Cart</button>
+  </section>
 
-</section>
+</main>
+
+<!-- CART MODAL -->
+<div id="cartModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+  <div class="modal-content">
+    <button class="modal-close" id="closeCartBtn" aria-label="Close cart">X</button>
+    <h2 id="cartTitle">Your Cart</h2>
+
+    <div id="cartItems"></div>
+    <p id="cartTotal"></p>
+
+    <div class="modal-actions">
+      <button id="clearCartBtn" type="button">Clear Cart</button>
+      <button id="processOrderBtn" type="button">Process Order</button>
+    </div>
+  </div>
+</div>
 
 <footer>
-  <p>&copy; 2026 ABC Fitness Studio</p>
+  <p>&copy; 2026 ABC Fitness Studio | Las Vegas, Nevada</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
