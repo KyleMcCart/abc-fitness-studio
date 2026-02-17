@@ -1,0 +1,28 @@
+body {
+font-family: Arial;
+margin: 0;
+background-color: #111;
+color: white;
+text-align: center;
+}
+
+header {
+background: black;
+padding: 20px;
+}
+
+nav a {
+color: white;
+margin: 10px;
+text-decoration: none;
+}
+
+.hero {
+background: blue;
+padding: 50px;
+}
+
+button {
+padding: 10px 20px;
+font-size: 16px;
+}
